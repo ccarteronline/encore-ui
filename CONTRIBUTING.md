@@ -1,6 +1,6 @@
 # How to contribute
 
-We want to keep it as easy as possible to contribute changes Encore, while making sure not to overburden the core EncoreUI team. There are a few guidelines that we need to follow so that we can have a chance of keeping on top of things.
+We want to keep it as easy as possible to contribute changes to Encore, while making sure not to overburden the core EncoreUI team. There are a few guidelines that we need to follow so that we can have a chance of keeping on top of things.
 
 ## Bugs & Issues
 
@@ -10,8 +10,7 @@ When submiting a bug report, please **include a set of steps to reproduce the is
 
 ## Adding/Updating Code
 
-If you haven't already, let the EncoreUI team know what your plans are. This is important so that time isn't spent by separate teams doing the same thing, and so that the team can get an initial round of feedback in before coding starts.
-
+If you plan on adding/updating code, please make sure you've first filed an issue, detailing why you think the update is necessary. This lets the EncoreUI team discuss the problem and potential solutions with you. We also want to ensure that separate teams aren't trying to do the same thing simultaneously.
 
 ## PR Types:
 
@@ -33,12 +32,12 @@ Note that while this process is listed as for "New Components", it also has impl
 
 ## New Components - PRs
 * **Prerequisites**: 
-    * [Issue created](https://github.com/rackerlabs/encore-ui/issues)
-    * Link to Invision designs if these exist
-    * Screenshot in Issue of final visual design
-    * For new visual components or visual changes, sign-off from our designers is _required_. Mark issue with `Needs Design` label to request input
-    * When all technical discussion on the issue is complete, change the label to `Ready for Dev`. For visual components/changes, *only* a designer may make this change.
     * New Components _must_ be created using our [Component Scaffolding](./guides/ui-setup.md#creating-a-new-component)
+    * [Issue created](https://github.com/rackerlabs/encore-ui/issues) with the following items:
+        * Link to Invision designs if these exist
+        * Screenshot in Issue of final visual design
+        * For new visual components or visual changes, sign-off from our designers is _required_. Mark issue with `Needs Design` label to request input
+        * When all technical discussion on the issue is complete, change the label to `Ready for Dev`. For visual components/changes, *only* a designer may make this change.
 * **Step 1**: Submitter includes screenshot of new component in PR description
 * **Step 2**: Comment with Design Sign-Off on final product - Design LGTM
 * **Step 3**: Checklist
@@ -47,16 +46,16 @@ Note that while this process is listed as for "New Components", it also has impl
     * [Functional/Midway Tests updated](./guides/testing.md#midway-tests)
     * [CSS Best Practices (this document needs an update)](./guides/css-styleguide.md)
     * Component Documentation Updated (i.e. the `README.md` for the component)
-    * Encore Style Guide updated
+    * Encore Style Guide updated if applicable
 * **Step 4**: Comment from submitter with their verification of Checklist
 * **Step 5**: Requested Feedback:
+    * Keep an eye out for Labels added by reviewers (ex. "On Hold", "Needs Design", etc.)
     * Code Review topics:
         * CSS Best Practices (ie: LESS variables)
         * JavaScript / Angular Best Practices
         * Maintainability of the Code Base
         * JavaScript Documentation
         * Test Coverage validation
-    * Keep an eye out for Labels added by reviewers (ex. "On Hold", "Needs Design", etc.)
     * Create an issue for non-requested feedback & tag with type
         * Types: visual design, architecture, feature request, etc.
         * i.e. topics outside of the scope of the PR should be left for later. If a component already has design sign-off, the PR is not the place to question the design or ask for design changes
@@ -71,7 +70,7 @@ Note that while this process is listed as for "New Components", it also has impl
 
 ### Get feedback early and often
 
-It's much better to ask for feedback on an unfinished idea than to receive feedback on a finished one. If you're developing a new component, or updating an old one, feel free to post code as you write it. But please add "DON'T MERGE" to the title of the PR, to let people know it's not quite ready.
+It's much better to ask for feedback on an unfinished idea than to receive feedback on a finished one. If you're developing a new component, or updating an old one, feel free to post code as you write it. But please add "DO NOT MERGE" to the title of the PR, to let people know it's not quite ready.
 
 ## EncoreUI Developer Setup
 
