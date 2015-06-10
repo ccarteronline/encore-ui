@@ -1,6 +1,6 @@
 # How to contribute
 
-We want to keep it as easy as possible to contribute changes to Encore, while making sure not to overburden the core EncoreUI team. There are a few guidelines that we need to follow so that we can have a chance of keeping on top of things.
+We want to keep it as easy as possible to contribute changes to EncoreUI, while making sure not to overburden the core EncoreUI team. There are a few guidelines that we need to follow so that we can have a chance of keeping on top of things.
 
 ## Bugs & Issues
 
@@ -24,13 +24,11 @@ There are a few typical types of Pull Requests that we see:
 * Component Revisions - Update to the style or interaction
 * Deprecations
 
-The most complex PRs are usually "New Components". We've written up our criteria for a New Component PR. This is based on what we've found works best for our team, to minimize the time spent reviewing PRs.
+The most complex PRs are usually "New Components". The "PR Steps" below describe our criteria for putting together a new component PR. For the other types, adjust the steps as necessary, let common sense be your guide!
 
-Currently, when adding a new component, our most [precious](https://dl.dropboxusercontent.com/u/2384988/onering.jpg) resource is the time of our designers. We want to ensure that the PR process is as streamlined for them as possible, and this is made explicit below.
+Currently, when adding a new component, our most precious resource is the time of our designers. We want to ensure that the PR process is as streamlined for them as possible, and this is made explicit below.
 
-Note that while this process is listed as for "New Components", it also has implication for "Styles" PRs, "Component Revisions", and others. Let common sense be your guide!
-
-## New Components - PRs
+## PR Steps
 * **Prerequisites**: 
     * New Components _must_ be created using our [Component Scaffolding](./guides/ui-setup.md#creating-a-new-component)
     * [Issue created](https://github.com/rackerlabs/encore-ui/issues) with the following items:
@@ -38,7 +36,7 @@ Note that while this process is listed as for "New Components", it also has impl
         * Screenshot in Issue of final visual design
         * For new visual components or visual changes, sign-off from our designers is _required_. Mark issue with `Needs Design` label to request input
         * When all technical discussion on the issue is complete, change the label to `Ready for Dev`. For visual components/changes, *only* a designer may make this change.
-* **Step 1**: Submitter includes screenshot of new component in PR description
+* **Step 1**: Submitter includes screenshot of new component in PR description (See ["Design Review of Pull Requests"](#design-review-of-pull-requests) below)
 * **Step 2**: Comment with Design Sign-Off on final product - Design LGTM
 * **Step 3**: Checklist
     * [Unit Tests](./guides/testing.md#component-tests-aka-unit-tests)
@@ -46,7 +44,7 @@ Note that while this process is listed as for "New Components", it also has impl
     * [Functional/Midway Tests updated](./guides/testing.md#midway-tests)
     * [CSS Best Practices (this document needs an update)](./guides/css-styleguide.md)
     * Component Documentation Updated (i.e. the `README.md` for the component)
-    * Encore Style Guide updated if applicable
+    * EncoreUI Style Guide updated if applicable
 * **Step 4**: Comment from submitter with their verification of Checklist
 * **Step 5**: Requested Feedback:
     * Keep an eye out for Labels added by reviewers (ex. "On Hold", "Needs Design", etc.)
@@ -133,26 +131,7 @@ We use [the same commit format that the Angular Team follows](https://github.com
 
 Before submitting any changes, make sure the master branch is merged locally into your branch (using [Git rebase](http://git-scm.com/book/en/Git-Branching-Rebasing) is preferred). Once done, push your branch up to Github and [submit a Pull Request](https://help.github.com/articles/using-pull-requests).
 
-### Submitting Urgent Changes
-
-Normally, a review of all outstanding PRs is done every morning. This means that a PR submitted in the afternoon may not be reviewed until the next day. For non-urgent changes, this usually isn't an issue (although it isn't fun to wait for feedback).
-
-Sometimes changes are urgent, and in this case, the PR should be reviewed immediately. To mark a PR as urgent, use the 'PR:urgent' label. It's also helpful to note in the Pull Request comments the specifics behind the urgency.
-
-### Pull Request Minimum Requirements
-
-- Complete documentation (a docs subfolder with working examples and [ngdocs](https://github.com/angular/angular.js/wiki/Writing-AngularJS-Documentation)), along with inline code comments as beneficial
-- Unit tests with 80% line coverage
-- Midways tests for all new UI functionality
-- Screenshots highlighting design implementation
-- Proper commit logs
-- Passes JSHint & CSSLint
-
-Once a pull request has been submitted, you simply need to wait for the EncoreUI team to respond. Every pull request sends an e-mail out to the team, so there is no need to send any further communication to the team. If the pull request is urgent, that needs to be communicated before the pull request is sent.
-
-We like to at least comment on, if not accept, pull requests within three business days (and, typically, one business day). We may suggest some changes or improvements or alternatives, so **make sure there is time for review in your release plan**.
-
-### Design Review of Pull Requests
+## Design Review of Pull Requests
 
 Many times, pull requests will touch resources that render visually. These are still changes that must be reviewed! For the sake of simplicity and transparency, it is the responsibility of the author of a pull request to also include a comment containing screenshots of the visual changes. Here is an example of a typical pull request workflow containing designer feedback and sign off.
 
@@ -181,7 +160,7 @@ Here is an example of how you should edit the old screenshot comments to change 
 [Outdated screenshot.](https://cloud.githubusercontent.com/assets/12158682/7732292/7690b012-feec-11e4-9f2c-5dd32c81ad07.png)
 ```
 
-### Finalizing a Pull Request
+## Finalizing a Pull Request
 
 Occasionally a PR will receive comments and/or requests for changes before we merge it in. These changes should be submitted as new commits on the existing PR.
 
